@@ -1,0 +1,24 @@
+{
+  "name": "it-frontend-resources",
+  "version": "0.0.1",
+  "description": "Репозиторий с общими ресурсами для frontend разработки",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skarmind/it-frontend-resources.git"
+  },
+  "keywords": [
+    "styles",
+    "design",
+    "system"
+  ],
+  "author": "skarmind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skarmind/it-frontend-resources/issues"
+  },
+  "homepage": "https://github.com/skarmind/it-frontend-resources#readme"
+}
