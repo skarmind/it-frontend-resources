@@ -1,24 +1,100 @@
 {
+  "type": "module",
   "name": "it-frontend-resources",
+  "author": "skarmind",
+  "license": "MIT",
   "version": "0.0.1",
-  "description": "Репозиторий с общими ресурсами для frontend разработки",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skarmind/it-frontend-resources.git"
   },
   "keywords": [
-    "styles",
-    "design",
-    "system"
+    "css",
+    "utilities",
+    "variables",
+    "custom properties"
   ],
-  "author": "skarmind",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/skarmind/it-frontend-resources/issues"
+  "style": "dist/style/open-props.min.css",
+  "source": "src/index.js",
+  "main": "dist/open-props.cjs",
+  "module": "dist/open-props.module.js",
+  "contributors": [
+    {
+      "name": "skarmind"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "skarmind"
+    }
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/open-props.module.js",
+      "require": "./dist/open-props.cjs",
+      "default": "./dist/open-props.cjs"
+    },
+    "./src": "./src/index.js",
+    "./src/animations": "./src/props.animations.js",
+    "./src/aspects": "./src/props.aspects.js",
+    "./src/borders": "./src/props.borders.js",
+    "./src/colors": "./src/props.colors.js",
+    "./src/easing": "./src/props.easing.js",
+    "./src/fonts": "./src/props.fonts.js",
+    "./src/shadows": "./src/props.shadows.js",
+    "./src/sizes": "./src/props.sizes.js",
+    "./src/zindex": "./src/props.zindex.js",
+    "./style": "./open-props.min.css",
+    "./normalize": "./normalize.min.css",
+    "./buttons": "./buttons.min.css",
+    "./animations": "./animations.min.css",
+    "./aspects": "./aspects.min.css",
+    "./borders": "./borders.min.css",
+    "./colors": "./colors.min.css",
+    "./easings": "./easings.min.css",
+    "./fonts": "./fonts.min.css",
+    "./media": "./media.min.css",
+    "./shadows": "./shadows.min.css",
+    "./sizes": "./sizes.min.css",
+    "./zindex": "./zindex.min.css"
   },
-  "homepage": "https://github.com/skarmind/it-frontend-resources#readme"
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build": "npm run gen:op",
+    "test": "ava test/basic.test.cjs",
+    "bundle": "concurrently npm:lib:*",
+    "bundle:pre-edit": "json -I -f package.json -e \"this.unpkg=''\"",
+    "bundle:post-edit": "json -I -f package.json -e \"this.unpkg='open-props.min.css'\"",
+    "gen:op": "cd build && node props.js '' true",
+    "gen:nowhere": "cd build && node props.js '' false",
+    "gen:prefixed": "cd build && node props.js 'op'",
+    "lib:js": "npm run bundle:pre-edit && microbundle --no-sourcemap && npm run bundle:post-edit",
+    "lib:all": "postcss src/style/index.css -o dist/style/open-props.min.css",
+    "lib:normalize": "postcss src/extra/normalize.css -o dist/style/normalize.min.css",
+    "lib:buttons": "postcss src/extra/buttons.css -o dist/style/buttons.min.css",
+    "lib:animations": "postcss src/style/props.animations.css -o dist/style/animations.min.css",
+    "lib:aspects": "postcss src/style/props.aspects.css -o dist/style/aspects.min.css",
+    "lib:borders": "postcss src/style/props.borders.css -o dist/style/borders.min.css",
+    "lib:easing": "postcss src/style/props.easing.css -o dist/style/easings.min.css",
+    "lib:fonts": "postcss src/style/props.fonts.css -o dist/style/fonts.min.css",
+    "lib:media": "postcss src/style/props.media.css -o dist/style/media.min.css",
+    "lib:shadows": "postcss src/style/props.shadows.css -o dist/style/shadows.min.css",
+    "lib:sizes": "postcss src/style/props.sizes.css -o dist/style/sizes.min.css",
+    "lib:zindex": "postcss src/style/props.zindex.css -o dist/style/zindex.min.css",
+    "lib:colors": "postcss src/style/props.colors.css -o dist/style/colors.min.css"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "concurrently": "^6.2.1",
+    "cssnano": "^5.0.8",
+    "json": "^11.0.0",
+    "microbundle": "^0.13.3",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^8.3.1",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "6.7.x"
+  }
 }
