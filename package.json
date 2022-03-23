@@ -14,10 +14,10 @@
     "variables",
     "custom properties"
   ],
-  "style": "dist/style/open-props.min.css",
+  "style": "dist/style/props.min.css",
   "source": "src/index.js",
-  "main": "dist/open-props.cjs",
-  "module": "dist/open-props.module.js",
+  "main": "dist/props.cjs",
+  "module": "dist/props.module.js",
   "contributors": [
     {
       "name": "skarmind"
@@ -30,17 +30,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/open-props.module.js",
-      "require": "./dist/open-props.cjs",
-      "default": "./dist/open-props.cjs"
+      "import": "./dist/props.module.js",
+      "require": "./dist/props.cjs",
+      "default": "./dist/props.cjs"
     },
     "./src": "./src/index.js",
     "./src/colors": "./src/props.colors.js",
-    "./style": "./open-props.min.css",
-    "./normalize": "./normalize.min.css",
-    "./buttons": "./buttons.min.css",
-    "./colors": "./colors.min.css",
-    "./media": "./media.min.css"
+    "./style": "./props.min.css"
   },
   "browserslist": [
     "defaults"
@@ -50,24 +46,14 @@
     "test": "ava test/basic.test.cjs",
     "bundle": "concurrently npm:lib:*",
     "bundle:pre-edit": "json -I -f package.json -e \"this.unpkg=''\"",
-    "bundle:post-edit": "json -I -f package.json -e \"this.unpkg='open-props.min.css'\"",
+    "bundle:post-edit": "json -I -f package.json -e \"this.unpkg='props.min.css'\"",
     "gen:op": "cd build && node props.js '' true",
     "gen:nowhere": "cd build && node props.js '' false",
     "gen:prefixed": "cd build && node props.js 'op'",
     "lib:js": "npm run bundle:pre-edit && microbundle --no-sourcemap && npm run bundle:post-edit",
-    "lib:all": "postcss src/style/index.css -o dist/style/open-props.min.css",
-    "lib:normalize": "postcss src/extra/normalize.css -o dist/style/normalize.min.css",
-    "lib:buttons": "postcss src/extra/buttons.css -o dist/style/buttons.min.css",
-    "lib:animations": "postcss src/style/props.animations.css -o dist/style/animations.min.css",
-    "lib:aspects": "postcss src/style/props.aspects.css -o dist/style/aspects.min.css",
-    "lib:borders": "postcss src/style/props.borders.css -o dist/style/borders.min.css",
-    "lib:easing": "postcss src/style/props.easing.css -o dist/style/easings.min.css",
-    "lib:fonts": "postcss src/style/props.fonts.css -o dist/style/fonts.min.css",
-    "lib:media": "postcss src/style/props.media.css -o dist/style/media.min.css",
-    "lib:shadows": "postcss src/style/props.shadows.css -o dist/style/shadows.min.css",
-    "lib:sizes": "postcss src/style/props.sizes.css -o dist/style/sizes.min.css",
-    "lib:zindex": "postcss src/style/props.zindex.css -o dist/style/zindex.min.css",
-    "lib:colors": "postcss src/style/props.colors.css -o dist/style/colors.min.css"
+    "lib:all": "postcss src/style/index.css -o dist/style/props.min.css",
+    "lib:colors-dark": "postcss src/style/props.colors.dark.css -o dist/style/colors.dark.min.css",
+    "lib:colors-light": "postcss src/style/props.colors.light.css -o dist/style/colors.light.min.css"
   },
   "devDependencies": {
     "ava": "^3.15.0",
@@ -81,5 +67,5 @@
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "6.7.x"
   },
-  "unpkg": "open-props.min.css"
+  "unpkg": "props.min.css"
 }
