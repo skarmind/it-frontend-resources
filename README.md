@@ -9,3 +9,5 @@
    /src/style/ 
  - npm run bundle - генерация папки **dist** с JS файлами и css
    стилями
+*Удалил практически все лишнее, чтобы глаза не мозолило. 
+Исходники Open Props: https://github.com/argyleink/open-props
