@@ -35,28 +35,12 @@
       "default": "./dist/open-props.cjs"
     },
     "./src": "./src/index.js",
-    "./src/animations": "./src/props.animations.js",
-    "./src/aspects": "./src/props.aspects.js",
-    "./src/borders": "./src/props.borders.js",
     "./src/colors": "./src/props.colors.js",
-    "./src/easing": "./src/props.easing.js",
-    "./src/fonts": "./src/props.fonts.js",
-    "./src/shadows": "./src/props.shadows.js",
-    "./src/sizes": "./src/props.sizes.js",
-    "./src/zindex": "./src/props.zindex.js",
     "./style": "./open-props.min.css",
     "./normalize": "./normalize.min.css",
     "./buttons": "./buttons.min.css",
-    "./animations": "./animations.min.css",
-    "./aspects": "./aspects.min.css",
-    "./borders": "./borders.min.css",
     "./colors": "./colors.min.css",
-    "./easings": "./easings.min.css",
-    "./fonts": "./fonts.min.css",
-    "./media": "./media.min.css",
-    "./shadows": "./shadows.min.css",
-    "./sizes": "./sizes.min.css",
-    "./zindex": "./zindex.min.css"
+    "./media": "./media.min.css"
   },
   "browserslist": [
     "defaults"
@@ -96,5 +80,6 @@
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "6.7.x"
-  }
+  },
+  "unpkg": "open-props.min.css"
 }
