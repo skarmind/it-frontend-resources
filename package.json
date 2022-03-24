@@ -3,7 +3,7 @@
   "name": "it-frontend-resources",
   "author": "skarmind",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skarmind/it-frontend-resources.git"
@@ -48,9 +48,7 @@
     "bundle": "concurrently npm:lib:*",
     "bundle:pre-edit": "json -I -f package.json -e \"this.unpkg=''\"",
     "bundle:post-edit": "json -I -f package.json -e \"this.unpkg='props.min.css'\"",
-    "gen:op": "cd build && node props.js '' true",
-    "gen:nowhere": "cd build && node props.js '' false",
-    "gen:prefixed": "cd build && node props.js 'op'",
+    "gen:op": "cd build && node props.js",
     "lib:js": "npm run bundle:pre-edit && microbundle --no-sourcemap && npm run bundle:post-edit",
     "lib:all": "postcss src/style/index.css -o dist/style/props.min.css",
     "lib:colors-dark": "postcss src/style/props.colors.dark.css -o dist/style/colors.dark.min.css",
