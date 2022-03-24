@@ -1,5 +1,6 @@
-import darkColors from "./props.colors.dark.js";
-import lightColors from "./props.colors.light.js";
+import DarkColors from "./props.colors.dark";
+import LightColors from "./props.colors.light";
+import Breakpoints from "./props.breakpoints";
 
 const camelize = text => {
   text = text.replace(/[-]+(.)?/g, (_, c) => (c ? c.toUpperCase() : ""));
@@ -8,7 +9,7 @@ const camelize = text => {
 
 const mapToObjectNotation = props => {
   for (var prop in props) {
-    if (typeof props[prop] === "object") {
+    if (typeof props[prop] === "object" && props[prop] !== null) {
       mapToObjectNotation(props[prop]);
     } else {
       props[camelize(prop)] = props[prop];
@@ -18,8 +19,9 @@ const mapToObjectNotation = props => {
 };
 
 const OpenProps = mapToObjectNotation({
-  darkColors,
-  lightColors,
+  DarkColors,
+  LightColors,
+  Breakpoints
 });
 
 export default OpenProps;
