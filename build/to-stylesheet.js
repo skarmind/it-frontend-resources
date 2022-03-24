@@ -2,24 +2,24 @@ import fs from "fs";
 
 export const buildPropsStylesheet = (
   { filename, props },
-  { isDark, prefix }
+  { genTheme = false }
 ) => {
   const file = fs.createWriteStream("../src/style/" + filename);
 
   let appendedMeta = "";
 
-  if (isDark) {
+  if (genTheme === "dark") {
     file.write(`[color-scheme='dark']{\n
 color-scheme: dark; \n`);
-  } else {
+  } else if (genTheme === "light") {
     file.write(`:root{\n
 color-scheme: light; \n`);
+  } else {
+    file.write(":root{\n");
   }
 
   Object.entries(props).forEach(([prop, val]) => {
     if (prop.includes("-@")) return;
-
-    if (prefix && prefix !== "''") prop = `--${prefix}-` + prop.slice(2);
 
     file.write(`${prop}: ${val};\n`);
   });
