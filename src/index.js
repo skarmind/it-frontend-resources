@@ -7,13 +7,19 @@ const camelize = text => {
 };
 
 const mapToObjectNotation = props => {
-  for (var prop in props) props[camelize(prop)] = props[prop];
+  for (var prop in props) {
+    if (typeof props[prop] === "object") {
+      mapToObjectNotation(props[prop]);
+    } else {
+      props[camelize(prop)] = props[prop];
+    }
+  }
   return props;
 };
 
 const OpenProps = mapToObjectNotation({
-  ...darkColors,
-  ...lightColors,
+  darkColors,
+  lightColors,
 });
 
 export default OpenProps;

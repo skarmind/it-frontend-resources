@@ -7,8 +7,6 @@ import { buildPropsStylesheet } from "./to-stylesheet.js";
 
 const [, , prefix = "", useWhere] = process.argv;
 
-const selector = useWhere === "true" ? "[color-scheme='dark']" : "html";
-
 const darkBundle = {
   "props.colors.dark.css": DarkColors.default,
 };
@@ -19,11 +17,11 @@ const lightBundle = {
 
 // gen prop variants
 Object.entries({ ...darkBundle }).forEach(([filename, props]) => {
-  buildPropsStylesheet({ filename, props }, { selector: true, prefix });
+  buildPropsStylesheet({ filename, props }, { isDark: true, prefix });
 });
 
 Object.entries({ ...lightBundle }).forEach(([filename, props]) => {
-  buildPropsStylesheet({ filename, props }, { selector: false, prefix });
+  buildPropsStylesheet({ filename, props }, { isDark: false, prefix });
 });
 
 // gen index.css
