@@ -11,17 +11,26 @@
         display: flex;
       }
       .section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         padding: 0 20px;
       }
       .vars__item {
         display: flex;
-        justify-content: center;
-        width: 150px;
+        justify-content: space-between;
+        width: 200px;
         padding: 2px 5px;
       }
-      .vars__text {
+      .vars__title {
+        text-align: center;
+      }
+      .vars__key {
         background: rgb(165, 165, 165);
-        padding: 0 5px;
+
+      }
+      .vars__value {
+        text-align: right;
         border-radius: 5px;
       }
       #changeTheme {
@@ -38,32 +47,40 @@
   <body>
     <div id="changeTheme">Сменить тему</div>
     <div class="js section">
-      <h3 class="js__title">Переменные из JS</h3>
-      <div id="js-vars"></div>
+      <h3 class="js__title">Цвета</h3>
+      <div id="colors-vars"></div>
+    </div>
+    <div class="js section">
+      <h3 class="js__title">Брейкпойнты</h3>
+      <div id="other-vars"></div>
     </div>
     <script type="module">
       import JsProps from "../dist/props.module.js";
       console.log("JavaSript переменные", JsProps);
-      const jsVars = document.getElementById("js-vars");
+      const colorVars = document.getElementById("colors-vars");
+      const otherVars = document.getElementById("other-vars");
       const changeTheme = document.getElementById("changeTheme");
       changeTheme.onclick = () => {
         const doc = document.firstElementChild;
         if (doc.getAttribute("color-scheme") === "dark") {
           doc.setAttribute("color-scheme", "light");
-          getColors(JsProps["LightColors"]);
+          getVars(colorVars, JsProps["LightColors"]);
         } else {
           doc.setAttribute("color-scheme", "dark");
-          getColors(JsProps["DarkColors"]);
+          getVars(colorVars, JsProps["DarkColors"]);
         }
       };
-      getColors(JsProps["LightColors"]);
-      function getColors(source) {
-        document.querySelectorAll(".vars__item").forEach(item => item.remove());
-        console.log(source)
-        Object.keys(source).forEach(key =>
-          jsVars.insertAdjacentHTML(
+      getVars(colorVars, JsProps["LightColors"]);
+      getVars(otherVars, JsProps["Breakpoints"]);
+      function getVars(container, source) {
+        container.querySelectorAll(".vars__item").forEach(item => item.remove());
+        const str = Object.keys(source).forEach(key =>
+          container.insertAdjacentHTML(
             "beforeend",
-            `<div class="vars__item" style='background: ${source[key]}'><span class="vars__text" >${key}</span><div>`
+            `<div class="vars__item" style='background: ${source[key]}'>
+              <div class="vars__key">${key}</div>
+              <div class="vars__value">${source[key]}</div>
+            </div>`
           )
         );
       }
