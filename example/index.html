@@ -50,15 +50,16 @@
         const doc = document.firstElementChild;
         if (doc.getAttribute("color-scheme") === "dark") {
           doc.setAttribute("color-scheme", "light");
-          getColors(JsProps["lightColors"]);
+          getColors(JsProps["LightColors"]);
         } else {
           doc.setAttribute("color-scheme", "dark");
-          getColors(JsProps["darkColors"]);
+          getColors(JsProps["DarkColors"]);
         }
       };
-      getColors(JsProps["lightColors"]);
+      getColors(JsProps["LightColors"]);
       function getColors(source) {
         document.querySelectorAll(".vars__item").forEach(item => item.remove());
+        console.log(source)
         Object.keys(source).forEach(key =>
           jsVars.insertAdjacentHTML(
             "beforeend",
