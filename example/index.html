@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>it-frontend-resources</title>
+    <style>
+      @import url(../dist/style/props.min.css);
+      body {
+        display: flex;
+      }
+      .section {
+        padding: 0 20px;
+      }
+      .vars__item {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        padding: 2px 5px;
+      }
+      .vars__text {
+        background: rgb(165, 165, 165);
+        padding: 0 5px;
+        border-radius: 5px;
+      }
+      #changeTheme {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background: rgba(30, 30, 30, 0.2);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeTheme">Сменить тему</div>
+    <div class="js section">
+      <h3 class="js__title">Переменные из JS</h3>
+      <div id="js-vars"></div>
+    </div>
+    <script type="module">
+      import JsProps from "../dist/props.module.js";
+      console.log("JavaSript переменные", JsProps);
+      const jsVars = document.getElementById("js-vars");
+      const changeTheme = document.getElementById("changeTheme");
+      changeTheme.onclick = () => {
+        const doc = document.firstElementChild;
+        if (doc.getAttribute("color-scheme") === "dark") {
+          doc.setAttribute("color-scheme", "light");
+          getColors(JsProps["lightColors"]);
+        } else {
+          doc.setAttribute("color-scheme", "dark");
+          getColors(JsProps["darkColors"]);
+        }
+      };
+      getColors(JsProps["lightColors"]);
+      function getColors(source) {
+        document.querySelectorAll(".vars__item").forEach(item => item.remove());
+        Object.keys(source).forEach(key =>
+          jsVars.insertAdjacentHTML(
+            "beforeend",
+            `<div class="vars__item" style='background: ${source[key]}'><span class="vars__text" >${key}</span><div>`
+          )
+        );
+      }
+    </script>
+  </body>
+</html>
