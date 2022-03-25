@@ -13,6 +13,7 @@ const mapToObjectNotation = props => {
       mapToObjectNotation(props[prop]);
     } else {
       props[camelize(prop)] = props[prop];
+      delete props[prop];
     }
   }
   return props;
@@ -21,7 +22,7 @@ const mapToObjectNotation = props => {
 const OpenProps = mapToObjectNotation({
   DarkColors,
   LightColors,
-  Breakpoints
+  Breakpoints,
 });
 
 export default OpenProps;
