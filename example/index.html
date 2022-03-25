@@ -9,6 +9,7 @@
       @import url(../dist/style/props.min.css);
       body {
         display: flex;
+        font-family: "Inter";
       }
       .section {
         display: flex;
@@ -19,7 +20,7 @@
       .vars__item {
         display: flex;
         justify-content: space-between;
-        width: 200px;
+        width: 300px;
         padding: 2px 5px;
       }
       .vars__title {
@@ -27,11 +28,14 @@
       }
       .vars__key {
         background: rgb(165, 165, 165);
-
       }
       .vars__value {
         text-align: right;
         border-radius: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 5px;
       }
       #changeTheme {
         position: fixed;
@@ -47,11 +51,11 @@
   <body>
     <div id="changeTheme">Сменить тему</div>
     <div class="js section">
-      <h3 class="js__title">Цвета</h3>
+      <h3 class="js__title">Зависимые от цвета переменные</h3>
       <div id="colors-vars"></div>
     </div>
     <div class="js section">
-      <h3 class="js__title">Брейкпойнты</h3>
+      <h3 class="js__title">Остальные переменные</h3>
       <div id="other-vars"></div>
     </div>
     <script type="module">
@@ -64,16 +68,36 @@
         const doc = document.firstElementChild;
         if (doc.getAttribute("color-scheme") === "dark") {
           doc.setAttribute("color-scheme", "light");
-          getVars(colorVars, JsProps["LightColors"]);
+          getVars(
+            colorVars,
+            { ...JsProps["LightColors"], ...JsProps["LightShadows"] },
+            true
+          );
         } else {
           doc.setAttribute("color-scheme", "dark");
-          getVars(colorVars, JsProps["DarkColors"]);
+          getVars(
+            colorVars,
+            { ...JsProps["DarkColors"], ...JsProps["DarkShadows"] },
+            true
+          );
         }
       };
-      getVars(colorVars, JsProps["LightColors"]);
+      getVars(
+        colorVars,
+        { ...JsProps["LightColors"], ...JsProps["LightShadows"] },
+        true
+      );
       getVars(otherVars, JsProps["Breakpoints"]);
-      function getVars(container, source) {
-        container.querySelectorAll(".vars__item").forEach(item => item.remove());
+      getVars(otherVars, JsProps["Spaces"]);
+      getVars(otherVars, JsProps["Dividers"]);
+      getVars(otherVars, JsProps["Durations"]);
+      getVars(otherVars, JsProps["Opacities"]);
+      getVars(otherVars, JsProps["Radius"]);
+      function getVars(container, source, clear = false) {
+        if (clear)
+          container
+            .querySelectorAll(".vars__item")
+            .forEach(item => item.remove());
         const str = Object.keys(source).forEach(key =>
           container.insertAdjacentHTML(
             "beforeend",
