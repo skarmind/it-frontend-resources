@@ -2,7 +2,7 @@ import fs from "fs";
 
 export const buildPropsStylesheet = (
   { filename, props },
-  { genTheme = false }
+  { genTheme = false, prefix }
 ) => {
   const file = fs.createWriteStream("../src/style/" + filename);
 
@@ -20,6 +20,8 @@ color-scheme: light; \n`);
 
   Object.entries(props).forEach(([prop, val]) => {
     if (prop.includes("-@")) return;
+
+    if (prefix) prop = `--${prefix}-` + prop.slice(2);
 
     file.write(`${prop}: ${val};\n`);
   });
