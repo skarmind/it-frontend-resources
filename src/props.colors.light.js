@@ -13,19 +13,19 @@ export const Base = {
 export const Primary = {
   "--primary": "#28d223",
   "--primary-hover": "#24bd20",
-  " --primary-active": "#20a81c",
+  "--primary-active": "#20a81c",
 };
 
 export const Secondary = {
   "--secondary": "#f2f4f7",
   "--secondary-hover": "#ebeef2",
-  " --secondary-active": "#dde3eb",
+  "--secondary-active": "#dde3eb",
 };
 
 export const Accent = {
   "--accent": "#ed4962",
   "--accent-hover": "#d54258",
-  " --accent-active": "#be3a4e",
+  "--accent-active": "#be3a4e",
 };
 
 export const Text = {

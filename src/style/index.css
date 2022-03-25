@@ -1,4 +1,13 @@
 
+    @import '../fonts/index.css';
+    @import '../helpers/text-style.css';
     @import './props.colors.light.css';
     @import './props.colors.dark.css';
+    @import './props.shadows.light.css';
+    @import './props.shadows.dark.css';
     @import './props.breakpoints.css';
+    @import './props.spaces.css';
+    @import './props.dividers.css';
+    @import './props.radius.css';
+    @import './props.durations.css';
+    @import './props.opacities.css';

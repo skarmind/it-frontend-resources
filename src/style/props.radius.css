@@ -1,0 +1,9 @@
+:root{
+--plx-radius-none: 0px;
+--plx-radius-xs: 2px;
+--plx-radius-s: 4px;
+--plx-radius-m: 8px;
+--plx-radius-l: 12px;
+--plx-radius-xl: 24px;
+--plx-radius-full: 50%;
+}
