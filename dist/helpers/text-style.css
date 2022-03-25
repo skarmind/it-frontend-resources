@@ -1,0 +1,113 @@
+.display-l {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+}
+
+.display-m {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 52px;
+}
+
+.display-s {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.headline-l {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.headline-m {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.headline-s {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.title-l {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.title-m {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.title-s {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.label-l {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+
+.label-m {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+.label-s {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.25px;
+}
+
+.body-l {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.body-m {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+
+.body-s {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
