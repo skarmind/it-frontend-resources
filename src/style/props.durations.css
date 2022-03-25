@@ -1,0 +1,8 @@
+:root{
+--plx-fastest: 0.1s;
+--plx-faster: 0.2s;
+--plx-fast: 0.4s;
+--plx-slow: 0.6s;
+--plx-slower: 0.8s;
+--plx-slowest: 1s;
+}
