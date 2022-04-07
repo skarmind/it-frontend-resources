@@ -1,14 +1,33 @@
-# it-frontend-resources
-Репозиторий с общими ресурсами для frontend разработки
+# itwa-design-tokens
 
-Пока переменные прописаны для цветов темной и светлой темы.
+## Подключение стилей в проект
 
-Исходники лежат в JavaScript файлах /src/ (props.colors.dark, props.colors.light)
+JavaScript объект с данными: `import ... from "itwa-design-tokens"`
 
- - npm run build - генерация из исходников css файлов в папку
-   /src/style/ 
- - npm run bundle - генерация папки **dist** с JS файлами и css
-   стилями
- 
-*Удалил практически все лишнее, чтобы глаза не мозолило. 
-Исходники Open Props: https://github.com/argyleink/open-props
+CSS переменные, хэлперы и шрифты: `import "itwa-design-tokens/dist/style/props.min.css"`
+
+## Project setup
+#### Установка зависимостей
+```
+npm install
+```
+
+#### Компиляция стилей в папку src/style
+```
+npm run build
+```
+
+#### Компиляция Javascript переменных в подключаемый модуль, обработка стилей из папки src/style с помощью POSTCSS и их перемещение
+```
+npm run bundle
+```
+
+#### Запуск live сервера для отладки стилей из папки dist (в разработке)
+```
+npm run live
+```
+
+#### Тестирование (в разработке)
+```
+npm run test
+```
