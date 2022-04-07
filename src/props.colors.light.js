@@ -10,19 +10,28 @@ export const Base = {
   "--base-9": "#001722",
 };
 
-export const Primary = {
-  "--primary": "#28d223",
-  "--primary-hover": "#24bd20",
-  "--primary-active": "#20a81c",
-};
-
-export const Secondary = {
+export const Interface = {
+  "--playrix": "#28d223",
+  "--playrix-hover": "#24bd20",
+  "--playrix-active": "#20a81c",
+  "--playrix-bg": "#EAFBE9",
+  "--playrix-bg-hover": "#DFF8DE",
+  "--playrix-bg-active": "#BCF1BB",
+  "--blue": "#5172FC",
+  "--blue-hover": "#4967E3",
+  "--blue-active": "#415BCA",
+  "--blue-bg": "#EEF1FF",
+  "--blue-bg-hover": "#E5EAFF",
+  "--blue-bg-active": "#C9D3FE",
+  "--green": "#00AA6D",
+  "--green-hover": "#009660",
+  "--green-active": "#008253",
+  "--green-bg": "#E0F5ED",
+  "--green-bg-hover": "#CCEADF",
+  "--green-bg-active": "#B3D9CB",
   "--secondary": "#f2f4f7",
   "--secondary-hover": "#ebeef2",
   "--secondary-active": "#dde3eb",
-};
-
-export const Accent = {
   "--accent": "#ed4962",
   "--accent-hover": "#d54258",
   "--accent-active": "#be3a4e",
@@ -60,9 +69,7 @@ export const Status = {
 
 const Colors = {
   ...Base,
-  ...Primary,
-  ...Secondary,
-  ...Accent,
+  ...Interface,
   ...Text,
   ...Status,
 };
