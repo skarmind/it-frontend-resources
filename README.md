@@ -1,6 +1,6 @@
 # itwa-design-tokens
 
-[styles]('/documentation/styles.md')
+[styles](documentation/styles.md)
 
 ## Подключение стилей в проект
 
