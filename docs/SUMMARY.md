@@ -14,5 +14,5 @@
     * [Тени](elementy-dizain-sistemy/elementy-cvetovykh-skhem/teni.md)
 * [Интеграция в проект](integraciya-v-proekt/README.md)
   * [JavaScript](integraciya-v-proekt/javascript.md)
-  * [CSS custom properties](integraciya-v-proekt/css-custom-properties.md)
+  * [CSS](integraciya-v-proekt/css.md)
   * [SCSS](integraciya-v-proekt/scss.md)
