@@ -1,7 +1,5 @@
 # itwa-design-tokens
 
-[styles](documentation/styles.md)
-
 ## Подключение стилей в проект
 
 JavaScript объект с данными: `import ... from "itwa-design-tokens"`
