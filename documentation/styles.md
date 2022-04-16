@@ -10,3 +10,31 @@ const header = () => (
     </div>
 )
 ```
+
+{% tabs %}
+{% tab title="Первый таб" %}
+* [ ] 1111
+{% endtab %}
+
+{% tab title="Второй таб" %}
+ПП
+{% endtab %}
+{% endtabs %}
+
+{% swagger method="get" path="" baseUrl="" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
