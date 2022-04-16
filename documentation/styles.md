@@ -10,3 +10,13 @@ const header = () => (
     </div>
 )
 ```
+
+{% tabs %}
+{% tab title="Первый таб" %}
+* [ ] 1111
+{% endtab %}
+
+{% tab title="Второй таб" %}
+ПП
+{% endtab %}
+{% endtabs %}
