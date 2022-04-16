@@ -1,6 +1,17 @@
 # Table of contents
 
 * [Начало работы](README.md)
+* [Элементы дизайн-системы](elementy-dizain-sistemy/README.md)
+  * [Общие элементы](elementy-dizain-sistemy/obshie-elementy/README.md)
+    * [Контрольные точки](elementy-dizain-sistemy/obshie-elementy/kontrolnye-tochki.md)
+    * [Разделители](elementy-dizain-sistemy/obshie-elementy/razdeliteli.md)
+    * [Продолжительности](elementy-dizain-sistemy/obshie-elementy/prodolzhitelnosti.md)
+    * [Прозрачности](elementy-dizain-sistemy/obshie-elementy/prozrachnosti.md)
+    * [Радиусы](elementy-dizain-sistemy/obshie-elementy/radiusy.md)
+    * [Отступы](elementy-dizain-sistemy/obshie-elementy/otstupy.md)
+  * [Элементы цветовых схем](elementy-dizain-sistemy/elementy-cvetovykh-skhem/README.md)
+    * [Цвета](elementy-dizain-sistemy/elementy-cvetovykh-skhem/cveta.md)
+    * [Тени](elementy-dizain-sistemy/elementy-cvetovykh-skhem/teni.md)
 * [Интеграция в проект](integraciya-v-proekt/README.md)
   * [JavaScript](integraciya-v-proekt/javascript.md)
   * [CSS custom properties](integraciya-v-proekt/css-custom-properties.md)
