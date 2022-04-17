@@ -25,9 +25,37 @@
 
 #### Интерфейсная палитра
 
-| CSS             | JS       | Назначение                                           |
-| --------------- | -------- | ---------------------------------------------------- |
-| --plx-surface-1 | surface1 | Основной фон страницы                                |
-| --plx-surface-2 | surface2 | Вспомогательный фон, участки поверхн основного фона  |
-| --plx-surface-3 | surface3 | Третичный фон, участки поверхн вспомогательного фона |
-| --plx-surface-4 | surface4 | Цвет фона шапки таблицы                              |
+| CSS                     | JS              | Назначение                         |
+| ----------------------- | --------------- | ---------------------------------- |
+| --plx-playrix           | playrix         | Фон кнопок, иконки страницы        |
+| --plx-playrix-hover     | playrixHover    | Hover фон кнопок, иконки           |
+| --plx-playrix-active    | playrixActive   | Active фон кнопок                  |
+| --plx-playrix-bg        | playrixBg       | Фон вспом. кнопок                  |
+| --plx-playrix-bg-hover  | playrixBgHover  | Hover фон вспом. кнопок            |
+| --plx-playrix-bg-active | playrixBgActive | Active фон вспом. кнопок           |
+| --plx-blue              | blue            | Фон кнопок, иконки страницы        |
+| --plx-blue-hover        | blueHover       | Hover фон кнопок, иконки           |
+| --plx-blue-active       | blueActive      | Active фон кнопок                  |
+| --plx-blue-bg           | blueBg          | Фон вспом. кнопок                  |
+| --plx-blue-bg-hover     | blueBgHover     | Hover фон вспом. кнопок            |
+| --plx-blue-bg-active    | blueBgActive    | Active фон вспом. кнопок           |
+| --plx-green             | green           | Фон кнопок, иконки страницы        |
+| --plx-green-hover       | greenHover      | Hover фон кнопок, иконки           |
+| --plx-green-active      | greenActive     | Active фон кнопок                  |
+| --plx-green-bg          | greenBg         | Фон вспом. кнопок                  |
+| --plx-green-bg-hover    | greenBgHover    | Hover фон вспом. кнопок            |
+| --plx-green-bg-active   | greenBgActive   | Active фон вспом. кнопок           |
+| --plx-secondary         | secondary       | Фон input и вспом. кнопок          |
+| --plx-secondary-hover   | secondaryHover  | Hover фон input                    |
+| --plx-secondary-active  | secondaryActive | Active фон input                   |
+| --plx-accent            | accent          | Фон акцента иконок и кнопок        |
+| --plx-accent-hover      | accentHover     | Hover фон акцента иконок и кнопок  |
+| --plx-accent-active     | accentActive    | Active фон акцента иконок и кнопок |
+
+#### Палитра текстов
+
+| CSS                  | JS            | Назначение                  |
+| -------------------- | ------------- | --------------------------- |
+| --plx-playrix        | playrix       | Фон кнопок, иконки страницы |
+| --plx-playrix-hover  | playrixHover  | Hover фон кнопок, иконки    |
+| --plx-playrix-active | playrixActive | Active фон кнопок           |
