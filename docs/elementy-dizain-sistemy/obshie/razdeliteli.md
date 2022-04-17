@@ -4,8 +4,8 @@
 Разделительные линии используются для группировки содержимого в таких компонентах, как списки, карточки, таблицы.
 {% endhint %}
 
-| CSS версия  | JS версия | Толщина |
-| ----------- | --------- | ------- |
-| --divider-s | dividerS  | 1px     |
-| --divider-m | dividerM  | 2px     |
-| --divider-l | dividerL  | 4px     |
+| CSS версия      | JS версия | Толщина |
+| --------------- | --------- | ------- |
+| --plx-divider-s | dividerS  | 1px     |
+| --plx-divider-m | dividerM  | 2px     |
+| --plx-divider-l | dividerL  | 4px     |
