@@ -1,7 +1,7 @@
 # Тени
 
-| CSS            | JS      | Назначение   |
-| -------------- | ------- | ------------ |
-| --plx-shadow-s | shadowS | panels,cards |
-| --plx-shadow-m | shadowM | dropdowns    |
-| --plx-shadow-l | shadowL | modals       |
+| CSS            | JS      | Назначение        |
+| -------------- | ------- | ----------------- |
+| --plx-shadow-s | shadowS | Панели и карточки |
+| --plx-shadow-m | shadowM | Дропдаун меню     |
+| --plx-shadow-l | shadowL | Модальные окна    |
