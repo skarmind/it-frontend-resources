@@ -14,33 +14,12 @@
     "variables",
     "custom properties"
   ],
-  "style": "dist/style/props.min.css",
-  "source": "src/index.js",
   "main": "dist/props.cjs",
-  "module": "dist/props.module.js",
-  "exports": {
-    ".": {
-      "import": "./dist/props.module.js",
-      "require": "./dist/props.cjs",
-      "default": "./dist/props.cjs"
-    },
-    "./src": "./src/index.js",
-    "./src/colors": "./src/props.colors.js",
-    "./style": "./props.min.css"
-  },
   "browserslist": [
     "defaults"
   ],
   "scripts": {
-    "build": "npm run gen:op",
-    "bundle": "concurrently npm:lib:*",
-    "live": "live-server --open=example",
-    "test": "ava test/basic.test.cjs",
-    "gen:op": "cd build && node props.js",
-    "lib:js": "microbundle --no-sourcemap",
-    "lib:all": "postcss src/style/index.css -o dist/style/props.min.css",
-    "lib:fonts": "cpy src/fonts dist/fonts --flat",
-    "lib:helpers": "cpy src/helpers dist/helpers --flat"
+    "build": "npm run gen:op"
   },
   "devDependencies": {
     "ava": "^3.15.0",
