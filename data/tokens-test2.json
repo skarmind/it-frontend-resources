@@ -472,7 +472,9 @@
           "type": "typography"
         }
       }
-    },
+    }
+  },
+  "light": {
     "light": {
       "base": {
         "base-1": {
@@ -888,7 +890,9 @@
           "type": "boxShadow"
         }
       }
-    },
+    }
+  },
+  "dark": {
     "dark": {
       "base": {
         "base-1": {

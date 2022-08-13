@@ -1,38 +1,52 @@
 {
+  "name": "@playrix/itwa-design-tokens",
+  "version": "1.1.0",
   "type": "module",
-  "name": "itwa-design-tokens",
-  "author": "skarmind",
-  "license": "MIT",
-  "version": "1.0.1",
+  "author": {
+    "name": "Sergei Katser",
+    "email": "sergei.katser@playrix.com"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Playrix/itwa-design-tokens.git"
+    "url": "https://github.com/Playrix/itwa-design-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Playrix/itwa-design-tokens/issues"
   },
   "keywords": [
     "css",
+    "figma",
+    "design as code",
     "utilities",
     "variables",
     "custom properties"
   ],
-  "main": "dist/props.cjs",
-  "browserslist": [
-    "defaults"
+  "main": "build/js/props.js",
+  "files": [
+    "src/",
+    "dist/"
   ],
   "scripts": {
-    "build": "npm run gen:op"
+    "prepare": "husky install",
+    "build": "node src",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "release": "npx semantic-release"
   },
   "devDependencies": {
-    "ava": "^3.15.0",
-    "concurrently": "^6.2.1",
-    "cpy-cli": "^4.1.0",
-    "cssnano": "^5.0.8",
-    "json": "^11.0.0",
-    "live-server": "^1.2.1",
-    "microbundle": "^0.13.3",
-    "postcss": "^8.3.9",
-    "postcss-cli": "^8.3.1",
-    "postcss-combine-duplicated-selectors": "^10.0.3",
-    "postcss-import": "^14.0.2",
-    "postcss-preset-env": "6.7.x"
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "semantic-release": "^19.0.2",
+    "style-dictionary": "^3.7.0",
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "algoliasearch": "^4.14.2"
   }
 }

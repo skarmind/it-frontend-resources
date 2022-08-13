@@ -1,7 +1,7 @@
 import StyleDictionary from 'style-dictionary';
 
 // РЕГИСТРАЦИЯ ФИЛЬТРОВ
-// ************************************ */
+// ************************************
 
 // Фильтр токенов темной темы по атрибуту dark
 StyleDictionary.registerFilter({

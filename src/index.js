@@ -1,4 +1,5 @@
 import StyleDictionary from 'style-dictionary';
+
 import './extensions/prepare.js';
 import './extensions/formats.js';
 import './extensions/transforms.js';
@@ -6,7 +7,30 @@ import './extensions/transform-groups.js';
 import './extensions/filters.js';
 import './extensions/files.js';
 
-const PATH = 'data/tokens-test.json';
+import algoliasearch from 'algoliasearch';
+
+const client = algoliasearch('L4NO60FFY8', 'e1696cfbd09829f06d0d1379844d1e66');
+
+const index = client.initIndex('itwa-design-tokens');
+
+const objects = [
+  {
+    firstname: 'Jimmie',
+    lastname: 'Barninger',
+    objectID: 'myID1',
+  },
+  {
+    firstname: 'Warren',
+    lastname: 'Speach',
+    objectID: 'myID2',
+  },
+];
+
+index.replaceAllObjects(objects, { safe: true }).then(({ objectIDs }) => {
+  console.log(objectIDs);
+});
+
+const PATH = 'data/tokens.json';
 
 // ПРЕДВАРИТЕЛЬНЫЙ ПАРСИНГ ТОКЕНОВ
 // ************************************ */

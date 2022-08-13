@@ -1,6 +1,6 @@
 import StyleDictionary from 'style-dictionary';
 
-import _ from 'lodash';
+import kebabCase from 'lodash/kebabCase.js';
 
 StyleDictionary.getFilters = function (dest, output, format, filters = ['common', 'dark']) {
   return filters.map((filter) => ({
@@ -18,7 +18,7 @@ StyleDictionary.getParts = function (dest, output, format) {
   return this.allThemes
     .map((theme) =>
       this.allTypes.map((filter) => ({
-        destination: `dist/${dest}/parts/${_.kebabCase(theme + '-' + filter)}.${output}`,
+        destination: `dist/${dest}/parts/${kebabCase(theme + '-' + filter)}.${output}`,
         format,
         filter: ({ type, attributes }) => type === filter && attributes.theme === theme,
         options: {
