@@ -3,6 +3,7 @@
 ## Подключение стилей в проект
 
 - [test](/test/)
+- https://img.shields.io/github/package-json/v/Playrix/itwa-merch-frontend/main?label=main
 
 JavaScript объект с данными: `import ... from "itwa-design-tokens"`
 
